@@ -1,0 +1,40 @@
+/* src/App.css */
+:root {
+  --primary-color: #e74c3c;
+  --primary-hover: #c0392b;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.price-tag {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Gallery Image height fix */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
