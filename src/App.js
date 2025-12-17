@@ -11,7 +11,7 @@ function App() {
 
   // 1. FETCH MENU FROM BACKEND
   useEffect(() => {
-    axios.get('http://localhost:5001/api/menu')
+    axios.get('https://tastybites-backend-ea3v.onrender.com')
       .then(response => {
         // Map MongoDB '_id' to 'id' for compatibility with your code
         const dataWithIds = response.data.map(item => ({
@@ -64,7 +64,7 @@ function App() {
     };
 
     try {
-      await axios.post('http://localhost:5001/api/orders', orderData);
+      await axios.post('https://tastybites-backend-ea3v.onrender.com', orderData);
       alert('Order placed successfully!');
       setCart([]); // Clear the cart
       e.target.reset(); // Clear the form

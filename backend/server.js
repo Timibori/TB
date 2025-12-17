@@ -11,8 +11,9 @@ app.use(express.json());
 
 // backend/server.js
 
-// This is your REAL cloud database connection string
-const MONGO_URI = 'mongodb+srv://bmaho6630_db_user:strategodak@cluster0.tcdrreg.mongodb.net/tastybites?appName=Cluster0';
+// GOOD
+require('dotenv').config(); // Load the secret tool
+const MONGO_URI = process.env.MONGO_URI;
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB Atlas Connected'))
